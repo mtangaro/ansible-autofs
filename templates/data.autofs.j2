@@ -1,10 +1,9 @@
 {% if "data" in autofs_mount_points %}
-/data           /etc/auto.data
-/data           /etc/auto.data{% if nfs_version == 3 %}          nfsvers=3{% endif %}
+/data           /etc/auto.data{% if nfs_version == 3 %}          nfsvers=3{% endif +%}
 {% endif %}
 {% if "discontinued" in autofs_mount_points %}
-/discontinued   /etc/auto.discontinued  nfsvers=3
+/discontinued   /etc/auto.discontinued{% if nfs_version == 3 %}  nfsvers=3{% endif +%}
 {% endif %}
 {% if "usrlocal" in autofs_mount_points or "usrlocal_celerycluster" in autofs_mount_points %}
-/-              /etc/auto.usrlocal      nfsvers=3
+/-              /etc/auto.usrlocal{% if nfs_version == 3 %}      nfsvers=3{% endif +%}
 {% endif %}
