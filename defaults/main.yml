@@ -25,3 +25,4 @@ autofs_conf_files:
 nfs_kernel_tuning: False
 nfs_kernel_tuning_parameters:
   sunrpc.tcp_max_slot_table_entries: 128
+nfs_version: 3
